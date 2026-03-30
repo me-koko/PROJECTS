@@ -1,4 +1,5 @@
 import CurrentWeather from "@/components/current-weather";
+import FavoriteCities from "@/components/favorite-cities";
 import HourlyTemperature from "@/components/hourly_temperature";
 import WeatherSkeleton from "@/components/loading-skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -97,8 +98,9 @@ if(!coordinates){
   return (
     <div className="space-y-4">
       { /* Favourite cities */ }
+      <FavoriteCities />
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-bold tracking-tight">my location</h1>
+        <h1 className="text-xl font-bold tracking-tight">My location</h1>
         <Button variant={'outline'}
         size={"icon"}
         onClick={handleRefresh}
@@ -121,6 +123,6 @@ if(!coordinates){
       </div>
 
     </div>
-  )
-}
+  );
+};
 export default WeatherDashboard;
